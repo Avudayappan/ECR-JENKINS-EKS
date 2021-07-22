@@ -27,7 +27,7 @@ pipeline {
                     "http://608310603824.dkr.ecr.us-east-2.amazonaws.com/precision",
                     "ecr:us-east-2.amazonaws.com:ecr_creds"){
                      def myImage = docker.build("precision")
-                     myImage.push('${env.BUILD_ID}')
+                     myImage.push('Latest')
                     )
                     
                 }
