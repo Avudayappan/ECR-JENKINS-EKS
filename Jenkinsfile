@@ -28,7 +28,7 @@ pipeline {
                     "ecr:us-east-2.amazonaws.com:ecr_creds"){
                      def myImage = docker.build("precision")
                      myImage.push('Latest')
-                    )
+                    }
                     
                 }
             }
