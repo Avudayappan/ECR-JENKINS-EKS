@@ -1,36 +1,4 @@
 
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@Avudayappan
-Avudayappan /
-ECR-JENKINS-EKS
-
-1
-0
-
-    0
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-
-    Settings
-
-ECR-JENKINS-EKS/pom.xml
-@Avudayappan
-Avudayappan Add files via upload
-Latest commit 26ddfec 6 days ago
-History
-1 contributor
-47 lines (45 sloc) 1.37 KB
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
