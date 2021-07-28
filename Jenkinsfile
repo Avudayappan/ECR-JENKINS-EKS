@@ -13,18 +13,23 @@ pipeline {
                 '''
             }
         }
+
         stage ('Build') {
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true install' 
+                sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
         }
 
-         stage('Upload Image to ECR') {
-     steps{
-         script {
-            docker.withRegistry( 'https://608310603824.dkr.ecr.us-east-2.amazonaws.com', "ecr:us-east-2:$6c8f5ec-1ce1-4e94-80c2-aws" ) {
-            docker.image("precision"). push('latest')
+        stage('Create Image'){
+            steps{
+                script{
+                    docker.withRegistry("http://608310603824.dkr.ecr.us-east-2.amazonaws.com","ecr:us-east-2.amazonaws.com:aws"){
+                     def myImage = docker.build("precision")
+                     myImage.push('Latest')
+                    }
+
+                }
             }
         }
-      }
     }
+}
