@@ -19,11 +19,10 @@ pipeline {
                 sh 'mvn -Dmaven.test.failure.ignore=true install' 
             }
         }
-
         stage('Create Image'){
             steps{
                 script{
-                    docker.withRegistry( 'https://608310603824.dkr.ecr.us-east-2.amazonaws.com', 'us-east-2: aws'){
+                    docker.withRegistry( 'https://608310603824.dkr.ecr.us-east-2.amazonaws.com', 'Amazon ECR Registry:deployment-US_EAST_2'){
                      def myImage = docker.build("precision")
                      myImage.push('latest')
                     }
